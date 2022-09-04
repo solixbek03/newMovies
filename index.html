@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+</head>
+<body>
+  <main>
+    <section id="section">
+      <div class="container">
+        <h1 class="h3 text-center my-3">Movies</h1>
+
+        <form class="js-form form-control d-flex justify-content-center">
+          <input class="form-control  my-3 input mx-2" type="text" required>
+
+          <button class="btn btn-danger" type="submit">submit</button>
+        </form>
+
+        <ul class="js-movies-list list-unstyled d-flex flex-wrap justify-content-around mt-5">
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <template id="template-movies-element">
+    <li class="card mb-3 text-center card-item w-25 mx-1">
+      <a class="card-link mb-3 text-center pb-2 card-item" href="">
+        <img class="card-img card-img-top" src="" alt="" width="200" height="150">
+
+        <div class="card-body">
+          <h5 class="card-title text-dark text-decoration-none">Card title</h5>
+          <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </a>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        more...
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Movies</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <p class="modal-body">
+              ...
+            </p>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button"  class="btn btn-primary js-button">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="./movies.js"></script>
+  <script src="./bootstrap.js"></script>
+  <script src="./utils.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
