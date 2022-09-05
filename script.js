@@ -15,12 +15,6 @@ let elNormalizedMoviesTemplate = $("#template-movies-element").content;
 let elForm = $(".js-form");
 let elInput = $(".input",);
 
-
-
-
-
-
-
 elForm.addEventListener("submit", function(evt) {
   evt.preventDefault();  
   
@@ -60,3 +54,22 @@ elForm.addEventListener("submit", function(evt) {
   renderPokemons(resultMovies);
 });
 
+
+
+let elButton = $(".js-button");
+let history = [];
+
+elButton.addEventListener('change', function(evt){
+  let elinputVall = elInput.value;
+  elInput.value = '';
+  bozorlikRoyhati.push(elinputVall);
+  localStorage.setItem('bozorlik', bozorlikRoyhati);
+
+  let boom = localStorage.getItem('bozorlik');
+
+  elResult.innerHTML = '';
+  let li = document.createElement("li")
+  li.textContent = boom
+  li.classList.add('text-light')
+  elResult.appendChild(li)
+})
